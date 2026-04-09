@@ -1,0 +1,16 @@
+node_modules/
+generate-og-image.mjs
+package.json
+package-lock.json
+.scratch/
+.sources/
+.DS_Store
+debug-*
+review-tracker.md
+.venv/
+drafts/
+d3.min.js
+leader-line.min.js
+.claude/
+docs/plans/
+systems.html

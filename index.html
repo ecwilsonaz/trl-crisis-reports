@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="How TRL's General Fund fell from $13.2 million to $5.9 million: eight exhibits from public budget documents and board meeting recordings.">
+<link rel="canonical" href="https://ecwilsonaz.github.io/trl-crisis-reports/">
+<meta property="og:title" content="TRL Crisis Report — Part 1: Anatomy of a Financial Crisis">
+<meta property="og:description" content="How TRL's General Fund fell from $13.2 million to $5.9 million: eight exhibits from public budget documents and board meeting recordings.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://ecwilsonaz.github.io/trl-crisis-reports/images/og-image-part1.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TRL Crisis Report — Part 1: Anatomy of a Financial Crisis">
+<meta property="og:url" content="https://ecwilsonaz.github.io/trl-crisis-reports/">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-03-20T00:00:00Z">
+<meta property="article:modified_time" content="2026-04-03T00:00:00Z">
+<meta property="article:author" content="Eric Wilson">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://ecwilsonaz.github.io/trl-crisis-reports/images/og-image-part1.png">
+<meta name="twitter:image:alt" content="TRL Crisis Report — Part 1: Anatomy of a Financial Crisis">
+<meta name="twitter:title" content="TRL Crisis Report — Part 1: Anatomy of a Financial Crisis">
+<meta name="twitter:description" content="How TRL's General Fund fell from $13.2 million to $5.9 million: eight exhibits from public budget documents and board meeting recordings.">
+<meta name="color-scheme" content="light dark">
+<title>TRL Crisis Report — Part 1: Anatomy of a Financial Crisis</title>
+<link rel="preload" href="fonts/ibm-plex-serif-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/ibm-plex-mono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="trl-common.css?v=20260404">
+<script src="trl-common.js?v=20260404"></script>
+<script src="chart.umd.min.js?v=20260403" defer></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"TRL Crisis Report — Part 1: Anatomy of a Financial Crisis","author":{"@type":"Person","name":"Eric Wilson"},"datePublished":"2026-03-20","dateModified":"2026-04-08","description":"How TRL's General Fund fell from $13.2 million to $5.9 million: eight exhibits from public budget documents and board meeting recordings.","image":"https://ecwilsonaz.github.io/trl-crisis-reports/images/og-image-part1.png"}
+</script>
+<style>
+/* ─── Part 1 overrides ─── */
+.chart-frame { padding: 32px; }
+@media (max-width: 768px) { .chart-frame { padding: 16px 12px 20px; } }
+@media (max-width: 480px) {
+  .chart-frame { padding: 14px 10px 16px; }
+  /* Exhibit C needs ~2/3 screen height on mobile */
+  .chart-wrap.xtall { height: 50vh; min-height: 340px; }
+  .footer .part-link { padding-bottom: 24px; }
+}
+
+/* Exhibit E headline stats (moved from canvas overlay for mobile) */
+.chart-headline {
+  text-align: center;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  margin: 8px 0 4px;
+  line-height: 1.6;
+}
+.chart-headline span { margin: 0 0.5em; }
+@media (max-width: 480px) {
+  .chart-headline span { display: block; margin: 0; }
+}
+
+/* Quote timeline overrides */
+.quote-item.quote-danger .quote-text { color: var(--text-primary); }
+.quote-item.quote-event .quote-text { font-size: 16px; }
+
+/* Contrast box: zero-value special styling */
+.contrast-item.c-zero { border-bottom-color: var(--red-bg); }
+.contrast-item.c-zero .c-label { color: var(--text-primary); }
+.contrast-item:last-child { border-bottom: none; }
+
+/* ═══ PRINT (Part 1-specific) ═══ */
+@media print {
+  .chart-frame { padding: 16px; }
+  .chart-headline { font-size: 10pt; }
+  .quote-text { font-size: 10.5pt; line-height: 1.4; }
+  .quote-date { font-size: 8.5pt; }
+  .quote-speaker { font-size: 8.5pt; line-height: 1.35; }
+  .quote-item.quote-event .quote-text { font-size: 10pt; }
+
+  /* Exhibit B: fit quote timeline on one page */
+  #exhibit-b .quote-timeline { margin: 8px 0 8px 10px; padding-left: 12px; }
+  #exhibit-b .quote-item { padding: 3px 0; margin-bottom: 6px; }
+  .contrast-item { font-size: 10pt; }
+  .contrast-item .c-value { font-size: 12pt; }
+  .contrast-item.c-zero .c-value { font-size: 14pt; }
+
+  /* Exhibit H: fit "Who Gained, Who Lost" on one page */
+  #exhibit-h .exhibit-label { margin-bottom: 2px; }
+  #exhibit-h h2 { margin-bottom: 4px; }
+  #exhibit-h .exhibit-desc { margin-bottom: 8px; }
+  .contrast-box { grid-template-columns: 1fr 1fr; margin-top: 8px; }
+  .contrast-side { padding: 10px 12px; }
+  .contrast-side h3 { font-size: 8pt; margin-bottom: 8px; letter-spacing: 1.5px; }
+  .contrast-item { padding: 4px 0; font-size: 9pt; }
+  .contrast-item .c-detail { font-size: 7.5pt; margin-top: 1px; }
+  .contrast-item .c-value { font-size: 10pt; }
+  .contrast-item.c-zero .c-value { font-size: 12pt; }
+  .contrast-summary { font-size: 8.5pt; line-height: 1.4; padding: 8px 12px; }
+}
+
+</style>
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<button class="theme-toggle" aria-label="Switch to dark mode" onclick="(function(b){var h=document.documentElement,t=h.dataset.theme==='dark'?'light':'dark';h.dataset.theme=t;try{localStorage.setItem('theme',t)}catch(e){};b.setAttribute('aria-label','Switch to '+(t==='dark'?'light':'dark')+' mode');b.querySelector('span').textContent=t==='dark'?'☀️':'🌙';})(this)">
+  <span aria-hidden="true">🌙</span>
+</button>
+<script>
+(function(){
+  var b = document.querySelector('.theme-toggle');
+  if (!b) return;
+  var dark = document.documentElement.dataset.theme === 'dark';
+  b.setAttribute('aria-label', 'Switch to ' + (dark ? 'light' : 'dark') + ' mode');
+  var s = b.querySelector('span');
+  if (s) s.textContent = dark ? '☀️' : '🌙';
+})();
+</script>
+<nav class="toc-sidebar" aria-label="Table of contents">
+  <div class="toc-header">
+    <a href="#main-content" class="toc-title">Part 1</a>
+    <button class="toc-collapse" aria-label="Hide table of contents" aria-expanded="true">&times;</button>
+  </div>
+  <button class="toc-expand" aria-label="Show table of contents" aria-expanded="false">ToC</button>
+
+  <a href="#exhibit-a" class="toc-link toc-exhibit" data-target="exhibit-a">A &middot; The Scissors<span class="toc-desc" aria-hidden="true">Revenue vs. expenditures</span></a>
+  <a href="#exhibit-b" class="toc-link toc-exhibit" data-target="exhibit-b">B &middot; What Leadership Said<span class="toc-desc" aria-hidden="true">Statements vs. trajectory</span></a>
+  <a href="#exhibit-c" class="toc-link toc-exhibit" data-target="exhibit-c">C &middot; Fund Balance Collapse<span class="toc-desc" aria-hidden="true">$13.2M &rarr; $5.9M</span></a>
+  <a href="#exhibit-d" class="toc-link toc-exhibit" data-target="exhibit-d">D &middot; Where Each Revenue Dollar Goes<span class="toc-desc" aria-hidden="true">Salaries, benefits, building</span></a>
+  <a href="#exhibit-e" class="toc-link toc-exhibit" data-target="exhibit-e">E &middot; Fewer People, More Money<span class="toc-desc" aria-hidden="true">Headcount vs. salary</span></a>
+  <a href="#exhibit-f" class="toc-link toc-exhibit" data-target="exhibit-f">F &middot; The Structural Mismatch<span class="toc-desc" aria-hidden="true">Per-employee cost vs. revenue</span></a>
+  <a href="#exhibit-g" class="toc-link toc-exhibit" data-target="exhibit-g">G &middot; Revenue Never Pursued<span class="toc-desc" aria-hidden="true">Levy rate erosion</span></a>
+  <a href="#exhibit-h" class="toc-link toc-exhibit" data-target="exhibit-h">H &middot; Where the Raises Went<span class="toc-desc" aria-hidden="true">Executive raises vs. frontline cuts</span></a>
+</nav>
+
+<main id="main-content" class="page has-toc">
+<noscript><p class="callout red-callout">Charts require JavaScript. Data tables are available below each chart.</p></noscript>
+
+<header class="header">
+  <h1>Timberland Regional Library:<br>Anatomy of a Financial Crisis</h1>
+  <div class="subtitle">What public budget documents and board recordings reveal about the path to 61 layoffs</div>
+  <div class="byline">By Eric Wilson &middot; March 20, 2026 &middot; Updated April 8, 2026</div>
+  <div class="part-link"><a href="part2.html">Part 2: What Went Wrong and What Comes Next &rarr;</a></div>
+</header>
+
+<div class="intro">
+  <p>In March 2026, Timberland Regional Library laid off 61 frontline employees &mdash; 38% of budgeted branch positions (TRL 2026 Final Budget, Position Inventory; layoff count confirmed by <a href="https://trl.org/news/trl-board-approves-staff-reductions/" target="_blank" rel="noopener noreferrer">TRL press release</a>, March 17, 2026) &mdash; and converted three branches to unstaffed self-service. The district told the public the shortfall was &ldquo;not apparent any earlier&rdquo; (<a href="https://archive.ph/rFfWB" target="_blank" rel="noopener noreferrer">TRL FAQ, March 19, 2026; since edited</a>). TRL serves half a million people across five counties in western Washington, with 29 branches and roughly 230 budgeted staff positions.</p>
+  <p>Public budget documents and board meeting recordings tell a different story. The eight exhibits below trace, year by year, how the district spent down its reserves, who benefited, and what options were never pursued.</p>
+</div>
+
+<!-- KEY METRICS -->
+<dl class="metrics-row">
+  <div class="metric-card metric-red">
+    <dt class="metric-label">2026 Budget Gap</dt>
+    <dd class="metric-value">$3.8M</dd>
+    <dd class="metric-context">Expenditures exceed revenue</dd>
+  </div>
+  <div class="metric-card metric-red">
+    <dt class="metric-label">Frontline Layoffs</dt>
+    <dd class="metric-value">61</dd>
+    <dd class="metric-context">38% of frontline staff</dd>
+  </div>
+  <div class="metric-card metric-amber">
+    <dt class="metric-label">Fund Balance Decline</dt>
+    <dd class="metric-value">$7.3M</dd>
+    <dd class="metric-context">General Fund balance, 2020 peak&ndash;2026</dd>
+  </div>
+  <div class="metric-card metric-red">
+    <dt class="metric-label">Executive Director (ED) Salary Increase</dt>
+    <dd class="metric-value">+37%</dd>
+    <dd class="metric-context">$155K&rarr;$213K (2022&ndash;2026 contracts)</dd>
+  </div>
+</dl>
+
+<details class="exec-summary" open>
+  <summary>At a glance</summary>
+  <div class="exec-summary-body">
+    <p><strong>What happened.</strong> Timberland Regional Library&rsquo;s General Fund balance fell from $13.2M to $5.9M between 2020 and 2026 (<a href="#exhibit-a">Exhibits A</a>&ndash;<a href="#exhibit-c">C</a>). In March 2026, the district laid off 61 frontline employees and converted three branches to unstaffed self-service. No administrative positions were eliminated (<a href="https://www.thedailyworld.com/2026/03/17/timberland-regional-library-to-lay-off-61-frontline-employees/" target="_blank" rel="noopener noreferrer">The Daily World</a>). No executive raises were rescinded (<a href="#exhibit-h">Exhibit H</a>).</p>
+    <p><strong>Why it happened.</strong> Two problems, not one. TRL&rsquo;s property tax levy rate has eroded 46% since 2014 under Washington&rsquo;s 1% growth cap &mdash; and the district has not attempted a levy lid lift since 2009, while every comparable peer system has (<a href="#exhibit-g">Exhibit G</a>). At the same time, per-employee costs grew 48% while revenue grew just 18%, creating an unsustainable structural gap (<a href="#exhibit-d">Exhibits D</a>&ndash;<a href="#exhibit-f">F</a>).</p>
+    <p><strong>The path forward.</strong> <a href="part2.html">Part 2</a> traces the spending decisions that doubled Service Center costs, measures TRL against every comparable peer, reconstructs the levy revenue the district never pursued, identifies the governance gaps that left the board flying blind, and lays out ten actions for a board that has run out of reasons to wait.</p>
+  </div>
+</details>
+
+<!-- EXHIBIT A: Revenue vs Expenditures -->
+<section class="exhibit" id="exhibit-a">
+  <div class="exhibit-label">Exhibit A</div>
+  <h2>The Scissors: Revenue vs. Expenditures</h2>
+  <p class="exhibit-desc">For years, revenue comfortably exceeded expenditures. In 2023, expenditures crossed above revenue for the first time. The gap has widened each year since. All data from TRL General Fund budget documents &mdash; the district's main operating account.</p>
+  <div class="chart-frame">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--blue)"></div> Revenue</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--red)"></div> Expenditures</div>
+    </div>
+    <div class="chart-wrap"><canvas id="chartA" role="img" aria-label="Exhibit A: Line chart showing TRL revenue vs expenditures from 2017 to 2026" aria-describedby="table-a"></canvas></div>
+  </div>
+  <p class="chart-note">Y-axis begins at $20M to show meaningful variation in the $22M&ndash;$33M range. Shaded area = deficit (expenditures exceeding revenue). 2020 expenditures exclude a $5.6M one-time transfer to the Building Fund for the Mountain View library build (shown separately in <a href="#exhibit-d">Exhibit D</a>).</p>
+  <details class="sr-table" id="table-a">
+    <summary>View data table</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">Revenue</th><th scope="col">Expenditures</th></tr></thead>
+      <tbody>
+        <tr><td>2017</td><td>$23.0M</td><td>$22.0M</td></tr>
+        <tr><td>2018</td><td>$23.7M</td><td>$21.9M</td></tr>
+        <tr><td>2019</td><td>$24.4M</td><td>$23.0M</td></tr>
+        <tr><td>2020</td><td>$24.7M</td><td>$23.1M</td></tr>
+        <tr><td>2021</td><td>$25.5M</td><td>$24.7M</td></tr>
+        <tr><td>2022</td><td>$25.9M</td><td>$24.6M</td></tr>
+        <tr><td>2023</td><td>$26.1M</td><td>$27.1M</td></tr>
+        <tr><td>2024</td><td>$26.9M</td><td>$28.5M</td></tr>
+        <tr><td>2025 est.</td><td>$27.1M</td><td>$30.4M</td></tr>
+        <tr><td>2026 proj.</td><td>$29.0M</td><td>$32.8M</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- EXHIBIT B: What They Said -->
+<section class="exhibit" id="exhibit-b">
+  <div class="exhibit-label">Exhibit B</div>
+  <h2>What Leadership Said vs. What Happened</h2>
+  <p class="exhibit-desc">All quotes from public board meeting recordings, verified against the original video.</p>
+  <div class="quote-timeline">
+    <div class="quote-item">
+      <div class="quote-date">August 28, 2024 (<a class="ts-link" href="https://youtu.be/2gCu5hWJeVw?t=1078" target="_blank" rel="noopener noreferrer">00:17:58<span class="sr-only"> — Board meeting, August 28, 2024</span></a>)</div>
+      <blockquote class="quote-text">"Timberland <strong>does not have a deficit</strong>. We cannot have a deficit. We do not want to get to the point of a deficit."</blockquote>
+      <div class="quote-speaker">&mdash; <cite>Cheryl Heywood, Executive Director</cite> &nbsp;|&nbsp; General Fund expenditures had exceeded revenue by $948K the prior year</div>
+    </div>
+    <div class="quote-item">
+      <div class="quote-date">September 25, 2024 (<a class="ts-link" href="https://youtu.be/p1ZufC6GoN4?t=1852" target="_blank" rel="noopener noreferrer">00:30:52<span class="sr-only"> — Board meeting, September 25, 2024</span></a>)</div>
+      <blockquote class="quote-text">"<strong>We are in the black</strong> because of all of our decisions that we've made since 2013."</blockquote>
+      <div class="quote-speaker">&mdash; <cite>Cheryl Heywood</cite> &nbsp;|&nbsp; Said to a public audience including a county commissioner. TRL did maintain a positive fund balance ($14.5M), but it had fallen $5.3M from its 2021 peak and General Fund expenditures had exceeded revenue for two consecutive years &mdash; the operating trajectory she elsewhere warned would require &ldquo;a reduction in force.&rdquo;</div>
+    </div>
+    <div class="quote-item quote-danger">
+      <div class="quote-date">December 18, 2024 (<a class="ts-link" href="https://youtu.be/983UXhHdA7Y?t=856" target="_blank" rel="noopener noreferrer">00:14:16<span class="sr-only"> — Board meeting, December 18, 2024</span></a>)</div>
+      <blockquote class="quote-text">"If you do go into the red, then you have to do something pretty quick, <strong>like have a reduction in force</strong> if it's that big."</blockquote>
+      <div class="quote-speaker">&mdash; <cite>Cheryl Heywood</cite> &nbsp;|&nbsp; Describing the exact scenario she would preside over 15 months later</div>
+    </div>
+    <div class="quote-item quote-danger">
+      <div class="quote-date">January 22, 2025 (<a class="ts-link" href="https://youtu.be/yOEPYXGGc4M?t=999" target="_blank" rel="noopener noreferrer">00:16:39<span class="sr-only"> — Board meeting, January 22, 2025</span></a>)</div>
+      <blockquote class="quote-text">"[This plan] includes forecasts based on attrition with <strong>no reduction in force, which means no people will be laid off</strong>."</blockquote>
+      <div class="quote-speaker">&mdash; <cite>Cheryl Heywood</cite> &nbsp;|&nbsp; Presenting a new staffing plan. Per-employee costs had been growing 5&ndash;11% annually since 2020; revenue, 1&ndash;3%.</div>
+    </div>
+    <div class="quote-item quote-danger">
+      <div class="quote-date">June 25, 2025 (<a class="ts-link" href="https://youtu.be/alYjlW8HVDs?t=505" target="_blank" rel="noopener noreferrer">00:08:25<span class="sr-only"> — Board meeting, June 25, 2025</span></a>)</div>
+      <blockquote class="quote-text">"Main reason why we did this [the staffing reorganization] is <strong>to stave off a financial cliff</strong>."</blockquote>
+      <div class="quote-speaker">&mdash; <cite>Cheryl Heywood</cite> &nbsp;|&nbsp; Despite this warning, she recommended the Collective Bargaining Agreement (5.7% per-employee increase) and executive raises over the following six months. The CBA brought frontline staff &mdash; whose median salary ($41,115) was the lowest among peer systems with published data &mdash; closer to peer pay levels.</div>
+    </div>
+    <div class="quote-item quote-event">
+      <div class="quote-date">December 30, 2025</div>
+      <div class="quote-text">Board approves $3.8M deficit budget + ED 2-year contract with 3% annual raises. Trustees Mittge, Harrington, Blanton, and Loup voted unanimously. Two seats vacant; Gwin chairing.</div>
+    </div>
+    <div class="quote-item quote-event">
+      <div class="quote-date">March 2026</div>
+      <div class="quote-text">61 frontline employees laid off. Three branches to unstaffed self-service. No admin positions eliminated in the reduction in force. No admin raises rescinded. ED salary: $212,991.</div>
+    </div>
+  </div>
+</section>
+
+<!-- EXHIBIT C: Fund Balance Collapse -->
+<section class="exhibit" id="exhibit-c">
+  <div class="exhibit-label">Exhibit C</div>
+  <h2>Fund Balance Collapse</h2>
+  <p class="exhibit-desc">TRL&rsquo;s General Fund balance peaked at $13.2M in 2020, then fell sharply &mdash; first from a $5.6M transfer to the Building Fund (a board-approved transfer, not an operating loss), then from accelerating salary costs that outpaced revenue. By 2026 the General Fund had breached the board&rsquo;s own 30% reserve policy.</p>
+  <div class="chart-frame">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--blue)"></div> General Fund (Jan 1)</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--red); height:1px; border-top: 1px dashed var(--red)"></div> 30% policy minimum</div>
+      <div class="legend-item"><div class="legend-swatch" style="border: 2px solid var(--red); background: transparent; border-radius: 50%; width: 10px; height: 10px;"></div> Original budget (no cuts)</div>
+    </div>
+    <div class="chart-wrap tall xtall"><canvas id="chartC" role="img" aria-label="Exhibit C: Line chart showing General Fund beginning balance from $13.2M peak in 2020 to $5.9M in 2026, breaching the 30% policy minimum. Projected to fall to $4.4M by 2027 after $2.2M in non-personnel cuts." aria-describedby="table-c"></canvas></div>
+  </div>
+  <p class="chart-note">TRL&rsquo;s Fund Balance Management Policy requires the General Fund to start each year with a balance equal to 30% of budgeted revenues (policy text confirmed at Dec 30, 2025 board meeting). The red zone marks where the General Fund fell below this threshold. The 2027 projection reflects $2.2M in non-personnel cuts (Res 26-001, Feb 2026) but not the subsequent 61 layoffs; the open circle shows the original budget before any cuts. Note: the chart shows beginning balances (Jan 1), which is the metric TRL&rsquo;s policy measures.</p>
+  <details class="sr-table" id="table-c">
+    <summary>View data table</summary>
+    <table>
+      <thead><tr><th scope="col">Year (Jan 1)</th><th scope="col">General Fund</th><th scope="col">30% Min</th></tr></thead>
+      <tbody>
+        <tr><td>2017</td><td>$9.0M</td><td>$6.8M</td></tr>
+        <tr><td>2018</td><td>$10.0M</td><td>$6.9M</td></tr>
+        <tr><td>2019</td><td>$11.8M</td><td>$7.1M</td></tr>
+        <tr><td>2020</td><td>$13.2M</td><td>$7.3M</td></tr>
+        <tr><td>2021</td><td>$9.2M</td><td>$7.5M</td></tr>
+        <tr><td>2022</td><td>$10.1M</td><td>$7.8M</td></tr>
+        <tr><td>2023</td><td>$11.4M</td><td>$7.9M</td></tr>
+        <tr><td>2024</td><td>$10.4M</td><td>$8.2M</td></tr>
+        <tr><td>2025</td><td>$8.9M</td><td>$8.4M</td></tr>
+        <tr><td>2026 (breach)</td><td>$5.9M</td><td>$8.7M</td></tr>
+        <tr><td>2027 proj.</td><td>$4.4M (after $2.2M cuts) / $1.8M (original budget)</td><td>$8.7M</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- EXHIBIT D: Where Each Revenue Dollar Goes -->
+<section class="exhibit" id="exhibit-d">
+  <div class="exhibit-label">Exhibit D</div>
+  <h2>Where Each Revenue Dollar Goes</h2>
+  <p class="exhibit-desc">Where each revenue dollar goes. Salaries and benefits together are the structural ramp &mdash; from 70 cents of every dollar in 2017 to 77 cents in 2026. Building expenditures spiked when the Mountain View library build consumed 11 cents of every dollar in 2024. At the peak, only 18 cents remained for everything else &mdash; the compounding squeeze that explains the fund balance collapse in <a href="#exhibit-c">Exhibit C</a>.</p>
+  <div class="chart-frame">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--red)"></div> Salaries</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--purple)"></div> Benefits</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--amber)"></div> Building</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--text-muted); opacity: 0.6"></div> Everything else</div>
+    </div>
+    <div class="chart-wrap"><canvas id="chartD" role="img" aria-label="Exhibit D: 100% stacked area chart showing where each revenue dollar goes — salaries, benefits, building, and everything else" aria-describedby="table-d"></canvas></div>
+  </div>
+  <p class="chart-note">Each band shows that category as a percentage of General Fund revenue. Benefits include medical, dental, and retirement. The Building Fund is a separate fund, primarily financed by a $5.6M General Fund transfer in 2020; its expenditures are shown here for comparison. All data from TRL budget documents.</p>
+  <details class="sr-table" id="table-d">
+    <summary>View data table</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">Salaries</th><th scope="col">Benefits</th><th scope="col">Building</th><th scope="col">Everything else</th></tr></thead>
+      <tbody>
+        <tr><td>2017</td><td>50.8%</td><td>18.9%</td><td>1.9%</td><td>28.4%</td></tr>
+        <tr><td>2018</td><td>49.3%</td><td>18.3%</td><td>1.7%</td><td>30.7%</td></tr>
+        <tr><td>2019</td><td>47.7%</td><td>19.1%</td><td>1.4%</td><td>31.8%</td></tr>
+        <tr><td>2020</td><td>50.0%</td><td>19.0%</td><td>2.3%</td><td>28.7%</td></tr>
+        <tr><td>2021</td><td>46.3%</td><td>17.3%</td><td>3.7%</td><td>32.7%</td></tr>
+        <tr><td>2022</td><td>47.0%</td><td>16.9%</td><td>4.3%</td><td>31.8%</td></tr>
+        <tr><td>2023</td><td>51.9%</td><td>18.0%</td><td>5.8%</td><td>24.3%</td></tr>
+        <tr><td>2024</td><td>53.1%</td><td>18.2%</td><td>11.0%</td><td>17.7%</td></tr>
+        <tr><td>2025 est.</td><td>57.6%</td><td>18.6%</td><td>4.0%</td><td>19.8%</td></tr>
+        <tr><td>2026 proj.</td><td>59.0%</td><td>17.6%</td><td>0.3%</td><td>23.1%</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- EXHIBIT E: Fewer People, More Money -->
+<section class="exhibit" id="exhibit-e">
+  <div class="exhibit-label">Exhibit E</div>
+  <h2>Fewer People, More Money</h2>
+  <p class="exhibit-desc">TRL's budgeted workforce shrank from 253 full-time-equivalent positions (FTE) in 2017 to 230 in 2026 &mdash; a 9% decline. During the same period, total salary expenditures grew 46%, from $11.7M to $17.1M. The entire salary increase was per-person cost growth, not headcount &mdash; new hires replaced turnover while total positions went down.</p>
+  <div class="chart-frame">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--blue)"></div> Budgeted Positions</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--red)"></div> Total Salary Spending</div>
+    </div>
+    <div class="chart-wrap"><canvas id="chartE" role="img" aria-label="Exhibit E: Indexed line chart showing positions declining 9% while salary spending rose 46% since 2017" aria-describedby="table-e"></canvas></div>
+  </div>
+  <p class="chart-note">Both series indexed to 2017 = 0%. FTE from Position Inventory tables in each TRL Final Budget. Salaries from General Fund Expenditure tables.</p>
+  <details class="sr-table" id="table-e">
+    <summary>View data table</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">Budgeted FTE</th><th scope="col">Salary Spending</th></tr></thead>
+      <tbody>
+        <tr><td>2017</td><td>253.4</td><td>$11.7M</td></tr>
+        <tr><td>2018</td><td>252.0</td><td>$11.7M</td></tr>
+        <tr><td>2019</td><td>249.7</td><td>$11.7M</td></tr>
+        <tr><td>2020</td><td>249.5</td><td>$12.3M</td></tr>
+        <tr><td>2021</td><td>232.5</td><td>$11.8M</td></tr>
+        <tr><td>2022</td><td>227.7</td><td>$12.2M</td></tr>
+        <tr><td>2023</td><td>227.0</td><td>$13.5M</td></tr>
+        <tr><td>2024</td><td>228.4</td><td>$14.3M</td></tr>
+        <tr><td>2025</td><td>229.3</td><td>$15.6M</td></tr>
+        <tr><td>2026</td><td>230.4</td><td>$17.1M</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- EXHIBIT F: The Structural Mismatch -->
+<section class="exhibit" id="exhibit-f">
+  <div class="exhibit-label">Exhibit F</div>
+  <h2>The Structural Mismatch</h2>
+  <p class="exhibit-desc">Revenue is structurally capped by Washington's 1% property tax lid &mdash; a state law that limits annual levy increases to 1% regardless of inflation &mdash; and cannot keep pace with rising costs. Per-employee salary costs tracked Seattle-area inflation through approximately 2020, then began pulling ahead via job reclassifications (upgrading position titles and pay grades), executive raises, and union contract increases that moved frontline staff toward (but not to) peer pay levels. The growing gap between costs and revenue capacity is the crisis the district never addressed.</p>
+  <div class="chart-frame">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--red)"></div> Salary per FTE</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--text-muted); height: 1px; border-top: 2px dashed var(--text-muted)"></div> Seattle CPI</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--green)"></div> Revenue</div>
+    </div>
+    <div class="chart-wrap"><canvas id="chartF" role="img" aria-label="Exhibit F: Line chart comparing salary per FTE growth vs CPI and revenue growth, indexed to 2017" aria-describedby="table-f"></canvas></div>
+  </div>
+  <p class="chart-note">All indexed to 2017 = 100. CPI-U (Consumer Price Index) annual averages from BLS Series CUURS49DSA0 (Seattle-Tacoma-Bellevue). Salary per FTE = General Fund salary actuals / budgeted FTE from TRL Position Inventory (differs from Exhibit J's state-survey FTE, which produces a lower base). FTE declined from 253 (2017) to 229 (2025) &mdash; the entire salary increase was per-person cost growth, not headcount. CPI series: CUURS49DSA0 (2017&ndash;2020) spliced with CUUSA423SA0 (2021&ndash;2025) at identical overlap point (295.560).</p>
+  <details class="sr-table" id="table-f">
+    <summary>View data table</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">Salary/FTE (indexed)</th><th scope="col">Seattle CPI (indexed)</th><th scope="col">Revenue (indexed)</th></tr></thead>
+      <tbody>
+        <tr><td>2017</td><td>100.0</td><td>100.0</td><td>100.0</td></tr>
+        <tr><td>2018</td><td>100.5</td><td>103.2</td><td>103.2</td></tr>
+        <tr><td>2019</td><td>101.3</td><td>105.8</td><td>106.4</td></tr>
+        <tr><td>2020</td><td>107.1</td><td>107.6</td><td>107.3</td></tr>
+        <tr><td>2021</td><td>110.2</td><td>112.5</td><td>111.1</td></tr>
+        <tr><td>2022</td><td>116.1</td><td>122.6</td><td>112.8</td></tr>
+        <tr><td>2023</td><td>129.3</td><td>129.8</td><td>113.6</td></tr>
+        <tr><td>2024</td><td>135.6</td><td>134.6</td><td>116.9</td></tr>
+        <tr><td>2025</td><td>147.8</td><td>137.8</td><td>118.0</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- EXHIBIT G: Levy Rate -->
+<section class="exhibit" id="exhibit-g">
+  <div class="exhibit-label">Exhibit G</div>
+  <h2>The Revenue Option Never Pursued</h2>
+  <p class="exhibit-desc">TRL's levy rate has declined 46% since its 2014 peak and sits at less than half the statutory maximum. The last levy lid lift &mdash; a ballot measure asking voters to approve a higher rate &mdash; was attempted in 2009. At the current rate, the owner of a $400,000 home pays about $90 per year in library taxes. At the peer median rate of $0.42, that would be about $168.</p>
+  <div class="chart-frame">
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--blue)"></div> TRL Levy Rate</div>
+      <div class="legend-item"><div class="legend-swatch" style="background: var(--red); height:1px; border-top: 1px dashed var(--red)"></div> Statutory Maximum ($0.50)</div>
+    </div>
+    <div class="chart-wrap"><canvas id="chartG" role="img" aria-label="Exhibit G: Line chart showing TRL levy rate decline from 2014 to 2026 vs the $0.50 statutory maximum" aria-describedby="table-g"></canvas></div>
+  </div>
+  <p class="chart-note">TRL's 2026 rate: $0.224 &mdash; less than half the $0.50 maximum</p>
+  <details class="sr-table" id="table-g">
+    <summary>View data table</summary>
+    <table>
+      <thead><tr><th scope="col">Year</th><th scope="col">TRL Levy Rate</th><th scope="col">Statutory Max</th></tr></thead>
+      <tbody>
+        <tr><td>2012</td><td>$0.383</td><td>$0.500</td></tr>
+        <tr><td>2013</td><td>$0.415</td><td>$0.500</td></tr>
+        <tr><td>2014</td><td>$0.416</td><td>$0.500</td></tr>
+        <tr><td>2015</td><td>$0.411</td><td>$0.500</td></tr>
+        <tr><td>2016</td><td>$0.409</td><td>$0.500</td></tr>
+        <tr><td>2017</td><td>$0.399</td><td>$0.500</td></tr>
+        <tr><td>2018</td><td>$0.382</td><td>$0.500</td></tr>
+        <tr><td>2019</td><td>$0.362</td><td>$0.500</td></tr>
+        <tr><td>2020</td><td>$0.340</td><td>$0.500</td></tr>
+        <tr><td>2021</td><td>$0.324</td><td>$0.500</td></tr>
+        <tr><td>2022</td><td>$0.288</td><td>$0.500</td></tr>
+        <tr><td>2023</td><td>$0.236</td><td>$0.500</td></tr>
+        <tr><td>2024</td><td>$0.234</td><td>$0.500</td></tr>
+        <tr><td>2025</td><td>$0.229</td><td>$0.500</td></tr>
+        <tr><td>2026</td><td>$0.224</td><td>$0.500</td></tr>
+      </tbody>
+    </table>
+  </details>
+</section>
+
+<!-- EXHIBIT H: Where the Raises Went -->
+<section class="exhibit" id="exhibit-h">
+  <div class="exhibit-label">Exhibit H</div>
+  <h2>Where the Raises Went</h2>
+  <p class="exhibit-desc">Executive compensation changes alongside frontline reductions.</p>
+  <div class="contrast-box">
+    <div class="contrast-side side-red">
+      <h3 id="h-gained">Who Gained (2023&rarr;2026)</h3>
+      <div class="contrast-item"><span class="c-label">Executive Director</span><span class="c-detail">$155,000 &rarr; $212,991 (<a href="sources/heywood-contracts/2022 Contract Executive Director Heywood.pdf">2022</a>&ndash;<a href="sources/heywood-contracts/2026-2027 Contract Executive Director Heywood signed.pdf">2026</a> contracts)</span><span class="c-value">+$58K</span></div>
+      <div class="contrast-item"><span class="c-label">HR Administrator</span><span class="c-detail">$98,828 &rarr; $142,963</span><span class="c-value">+$44K</span></div>
+      <div class="contrast-item"><span class="c-label">Executive Administrator</span><span class="c-detail">$89,554 &rarr; $133,760</span><span class="c-value">+$44K</span></div>
+      <div class="contrast-item"><span class="c-label">New: Employee Experience Advisor</span><span class="c-detail">Created Aug 2024</span><span class="c-value">$127K</span></div>
+      <div class="contrast-item"><span class="c-label">Patron Experiences Advisor</span><span class="c-detail">Retitled, +22.6% raise</span><span class="c-value">$131K</span></div>
+      <div class="contrast-item"><span class="c-label">ED 2-year contract</span><span class="c-detail">Approved Dec 30, 2025</span><span class="c-value">+3%/yr</span></div>
+      <div class="contrast-item c-zero"><span class="c-label">Service Center FTE (2026)</span><span class="c-detail">Six admin depts. Highest in 10-year dataset.</span><span class="c-value">44.3</span></div>
+      <div class="contrast-item c-zero"><span class="c-label">Admin raises rescinded</span><span class="c-value">0</span></div>
+    </div>
+    <div class="contrast-side side-green">
+      <h3 id="h-lost">Who Lost (March 2026)</h3>
+      <div class="contrast-item"><span class="c-label">Frontline employees laid off</span><span class="c-value">61</span></div>
+      <div class="contrast-item"><span class="c-label">Frontline workforce cut</span><span class="c-value">38%</span></div>
+      <div class="contrast-item"><span class="c-label">Branches converted to unstaffed</span><span class="c-value">3</span></div>
+      <div class="contrast-item"><span class="c-label">Books &amp; materials budget cut</span><span class="c-value">$1.8M</span></div>
+      <div class="contrast-item"><span class="c-label">Median TRL employee salary</span><span class="c-detail">lowest among peers</span><span class="c-value">$41,115</span></div>
+    </div>
+  </div>
+  <div class="contrast-summary">The three executive raises alone total +$146K/year. The ED&rsquo;s salary level was roughly proportional to peers by population served &mdash; the issue was not the level but the timing: raises approved alongside layoffs, while Service Center staffing reached its highest level in the ten-year dataset. One senior position (deputy director) was eliminated in 2024, saving ~$127K net &mdash; but the resulting reclassifications and subsequent 19.1% blanket increase more than offset those savings. The 61 layoffs were announced 11 weeks after the board approved the deficit budget and the ED's 2-year contract &mdash; at the same meeting.</div>
+</section>
+
+<footer class="footer">
+  <p>All data drawn from public records. Sources are cited with each exhibit and <a href="https://github.com/ecwilsonaz/trl-crisis-reports/tree/main/sources" target="_blank" rel="noopener noreferrer">archived on GitHub</a>.</p>
+  <p>Prepared independently and without compensation, March 20, 2026, by Eric Wilson, a Thurston County resident, TRL patron, and volunteer with the Patron Coalition for Local Libraries, a group that has pushed for budget transparency and keeping branches staffed (the author began volunteering while working on this research). The author has no financial, employment, or organizational relationship with TRL, AFSCME Local 3758, or any party named in this report. This analysis is based on public records. All quotes are from recorded public board meetings. After publication, Brenda Lane, Brian Mittge, and Cheryl Heywood were offered the opportunity to comment (deadline April 2, 2026, ahead of the second piece). Board President Brian Mittge reviewed the report and identified no factual errors. Lane responded; her clarification is included in Part 2.</p>
+  <div class="part-link"><a href="part2.html">Part 2: What Went Wrong and What Comes Next &rarr;</a></div>
+</footer>
+
+</main>
+
+<script>
+function fmt(n) {
+  if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+  if (n >= 1e3) return '$' + (n / 1e3).toFixed(0) + 'K';
+  return '$' + n.toFixed(2);
+}
+
+// Store chart instances for theme-aware destroy/recreate
+const chartInstances = {};
+
+function buildAllCharts() {
+  // Destroy existing charts
+  Object.values(chartInstances).forEach(c => c.destroy());
+  const C = tc();
+  Chart.defaults.font.family = "'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif";
+  Chart.defaults.font.size = 13;
+  Chart.defaults.color = C.muted;
+  Chart.defaults.animation = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const mob = window.innerWidth < 768;
+  Chart.defaults.elements.point.radius = mob ? 3 : 4;
+  Chart.defaults.elements.line.borderWidth = mob ? 2 : 2.5;
+
+// ─── SHARED DATA ───
+// All from TRL Final Budget documents (General Fund).
+// Same-edition methodology: each year's actual from the earliest subsequent Final Budget.
+// 2017: 2019 FB. 2018: 2020 FB. 2019-2020: 2021/2023 FB. 2021-2022: 2023/2025 FB. 2023: 2025 FB. 2024-2026: 2026 FB.
+const YEARS_10 = ['2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'];
+const YEARS_9  = YEARS_10.slice(0, 9); // 2017-2025
+const REVENUE  = [22986972, 23711616, 24448997, 24669027, 25536273, 25931476, 26109656, 26884485, 27129350, 29002000];
+const SALARIES = [11681970, 11682925, 11674836, 12330800, 11818000, 12193513, 13545748, 14290186, 15628985, 17102264];
+
+// ─── EXHIBIT A: Revenue vs Expenditures ───
+// 2020 excludes $5.6M one-time transfer to Building Fund for Mountain View library build (see Exhibit D).
+const aExpend = [22049853, 21911028, 22979157, 23102946, 24687671, 24608630, 27057712, 28452840, 30432723, 32811283];
+
+chartInstances.A = new Chart(document.getElementById('chartA').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: YEARS_10,
+    datasets: [
+      {
+        label: 'Revenue', data: REVENUE,
+        borderColor: C.blue, borderWidth: 2.5, pointRadius: 4, pointBackgroundColor: C.blue,
+        fill: false, tension: 0
+      },
+      {
+        label: 'Expenditures', data: aExpend,
+        borderColor: C.red, borderWidth: 2.5, pointRadius: 4, pointBackgroundColor: C.red,
+        fill: false, tension: 0
+      },
+      // Hidden dataset for deficit shading (expenditures fill down to revenue)
+      {
+        label: '_deficit', data: aExpend,
+        borderColor: 'transparent', pointRadius: 0,
+        backgroundColor: C.redBg,
+        fill: { target: 0, above: C.redBg, below: 'transparent' },
+        tension: 0
+      }
+    ]
+  },
+  plugins: [{
+    id: 'chartAAnnotations',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      const C = tc();
+
+
+      // Crossover annotation at 2023
+      const i2023 = YEARS_10.indexOf('2023');
+      const cx = xScale.getPixelForValue(i2023);
+      const crossY = yScale.getPixelForValue(aExpend[i2023]);
+      const gap23 = aExpend[i2023] - REVENUE[i2023];
+      ctx.save();
+      ctx.fillStyle = C.red;
+      ctx.font = '600 13px ' + C.sans;
+      ctx.textAlign = 'center';
+      ctx.fillText('CROSSOVER', cx, crossY - 52);
+      ctx.font = '13px ' + C.mono;
+      ctx.fillStyle = C.muted;
+      ctx.fillText(fmt(gap23) + ' gap', cx, crossY - 38);
+      // Dotted leader line
+      ctx.strokeStyle = C.red;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([3, 3]);
+      ctx.beginPath();
+      ctx.moveTo(cx, crossY - 30);
+      ctx.lineTo(cx, crossY - 5);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      // 2026 gap annotation
+      const last = 9;
+      const gap26 = aExpend[last] - REVENUE[last];
+      const lx = xScale.getPixelForValue(last);
+      const midY = (yScale.getPixelForValue(REVENUE[last]) + yScale.getPixelForValue(aExpend[last])) / 2;
+      ctx.fillStyle = C.red;
+      ctx.font = '600 13px ' + C.mono;
+      ctx.textAlign = 'left';
+      ctx.fillText(fmt(gap26), lx + 10, midY - 2);
+      ctx.fillText('gap', lx + 10, midY + 14);
+
+      // Endpoint value labels (desktop only)
+      if (window.innerWidth >= 768) {
+        ctx.font = '13px ' + C.mono;
+        ctx.fillStyle = C.blue;
+        ctx.fillText(fmt(REVENUE[last]), lx + 10, yScale.getPixelForValue(REVENUE[last]) + 4);
+        ctx.fillStyle = C.red;
+        ctx.fillText(fmt(aExpend[last]), lx + 10, yScale.getPixelForValue(aExpend[last]) + 4);
+      }
+      ctx.restore();
+    }
+  }],
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { right: 60 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            if (ctx.dataset.label.startsWith('_')) return null;
+            return ctx.dataset.label + ': ' + fmt(ctx.parsed.y);
+          }
+        },
+        filter: i => !i.dataset.label.startsWith('_')
+      }
+    },
+    scales: {
+      y: {
+        min: 20e6, max: 34e6,
+        ticks: { callback: v => { const m = v/1e6; return '$' + (m%1===0 ? m.toFixed(0) : m.toFixed(1)) + 'M'; }, font: { family: C.mono, size: 13 } },
+        grid: { color: C.grid }
+      },
+      x: {
+        grid: { display: false },
+        ticks: {
+          font: { family: C.mono, size: 13 },
+          callback: function(val, i) {
+            const yr = this.getLabelForValue(val);
+            if (yr === '2025') return [yr, 'est.'];
+            if (yr === '2026') return [yr, 'proj.'];
+            return yr;
+          }
+        }
+      }
+    }
+  }
+});
+
+// ─── EXHIBIT C: Fund Balance Collapse ───
+// General Fund BEGINNING balances (Jan 1) — the metric TRL's Fund Balance Management Policy measures.
+// Each year's beginning balance = prior year's ending balance from TRL Final Budget "Budget in a Page."
+// 2017-2020: 2021 FB. 2021-2023: 2024 FB. 2024: 2026 FB. 2025: Res 25-001. 2026: Res 26-001 Actual.
+// 2027 proj: 2026 ending from Res 26-001 ($4,395,581, after $2.2M non-personnel cuts but before layoff savings)
+// and original 2026 Final Budget ($1,783,701, before any cuts). Layoff savings (~$1.4M est., Feb 10 meeting) not yet documented in a resolution.
+const YEARS_C = ['2017','2018','2019','2020','2021','2022','2023','2024','2025','2026','2027'];
+const gfBalance = [9038246, 9975365, 11775953, 13245793, 9207716, 10056317, 11379163, 10431107, 8862752, 5867207, 4395581];
+const gfPreLayoff = [null, null, null, null, null, null, null, null, null, null, 1783701];
+// Combined fund beginning balances (all five funds) — shown for context
+const cBalance = [14341625, 14844623, 16587482, 18457245, 19027215, 19768961, 18904276, 14449444, 14483485, 10194068, 9187288];
+// 30% policy: GF beginning balance must equal 30% of budgeted revenues for the proposed budget.
+// Source: Fund Balance Management Policy, confirmed Dec 30, 2025 board meeting transcript.
+// Each value is Total GF Revenue from that year's Final Budget "Budget in a Page."
+// 2027 estimated at 2026 level (no budget yet).
+const cRevForThreshold = [22786728, 22949000, 23529950, 24326000, 25096350, 25930550, 26364000, 27274750, 28104200, 29002000, 29002000];
+const cThreshold = cRevForThreshold.map(r => r * 0.30);
+
+chartInstances.C = new Chart(document.getElementById('chartC').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: YEARS_C,
+    datasets: [
+      {
+        label: 'General Fund (Jan 1)', data: gfBalance,
+        borderColor: C.blue, borderWidth: 2.5,
+        pointRadius: gfBalance.map((v,i) => i === gfBalance.length - 1 ? 6 : 5),
+        pointBackgroundColor: gfBalance.map((v,i) => v < cThreshold[i] ? C.red : C.blue),
+        pointBorderColor: gfBalance.map((v,i) => v < cThreshold[i] ? C.red : C.blue),
+        fill: false, tension: 0
+      },
+      {
+        label: 'Original budget (no cuts)', data: gfPreLayoff,
+        borderColor: 'transparent', borderWidth: 0,
+        pointRadius: gfPreLayoff.map(v => v !== null ? 7 : 0),
+        pointBackgroundColor: 'rgba(255,255,255,0)',
+        pointBorderColor: C.red,
+        pointBorderWidth: 2,
+        pointStyle: 'circle',
+        fill: false
+      },
+      {
+        label: '30% Policy Minimum', data: cThreshold,
+        borderColor: C.red, borderWidth: 1.5, borderDash: [6, 4],
+        pointRadius: 0, fill: false, tension: 0
+      }
+    ]
+  },
+  plugins: [{
+    id: 'chartCAnnotations',
+    beforeDatasetsDraw(chart) {
+      // Red fill zone where GF is below the 30% threshold
+      const ctx = chart.ctx;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      ctx.save();
+      ctx.beginPath();
+      let inBreach = false;
+      for (let i = 0; i < gfBalance.length; i++) {
+        if (gfBalance[i] < cThreshold[i]) {
+          const px = xScale.getPixelForValue(i);
+          if (!inBreach) {
+            // Interpolate the crossing point from the previous safe point
+            if (i > 0) {
+              const prevGf = gfBalance[i - 1], prevTh = cThreshold[i - 1];
+              const curGf = gfBalance[i], curTh = cThreshold[i];
+              const t = (prevGf - prevTh) / ((prevGf - prevTh) - (curGf - curTh));
+              const cx = xScale.getPixelForValue(i - 1) + t * (px - xScale.getPixelForValue(i - 1));
+              const cy = yScale.getPixelForValue(prevTh + t * (curTh - prevTh));
+              ctx.moveTo(cx, cy);
+            } else {
+              ctx.moveTo(px, yScale.getPixelForValue(cThreshold[i]));
+            }
+            inBreach = true;
+          }
+          // Top edge: threshold line
+          ctx.lineTo(px, yScale.getPixelForValue(cThreshold[i]));
+        }
+      }
+      // Bottom edge: GF line back in reverse
+      for (let i = gfBalance.length - 1; i >= 0; i--) {
+        if (gfBalance[i] < cThreshold[i]) {
+          ctx.lineTo(xScale.getPixelForValue(i), yScale.getPixelForValue(gfBalance[i]));
+        }
+      }
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(220, 53, 69, 0.15)';
+      ctx.fill();
+      ctx.restore();
+    },
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      const C = tc();
+      ctx.save();
+
+      // Value labels on key data points: start, peak (2020), breach (2026), 2027 (after cuts)
+      const isMobile = window.innerWidth < 768;
+      const keyPoints = [0, 3, 9, 10]; // 2017, 2020 (peak), 2026 (breach), 2027 (after cuts)
+      keyPoints.forEach(i => {
+        if (i >= gfBalance.length) return;
+        if (isMobile && i !== 0 && i !== gfBalance.length - 1) return;
+        const v = gfBalance[i];
+        ctx.font = '600 13px ' + C.mono;
+        ctx.fillStyle = v < cThreshold[i] ? C.red : C.blue;
+        const px = xScale.getPixelForValue(i);
+        const py = yScale.getPixelForValue(v);
+        if (i === 0) {
+          ctx.textAlign = 'left';
+          ctx.fillText(fmt(v), chart.chartArea.left + 4, py - 12);
+        } else if (i === 3) {
+          ctx.textAlign = 'center';
+          ctx.fillText(fmt(v), px, py - 12);
+        } else if (i === 9) {
+          ctx.textAlign = 'center';
+          ctx.fillText(fmt(v), px, py - 12);
+        } else if (i === 10) {
+          // 2027 (after cuts)
+          ctx.textAlign = 'right';
+          ctx.fillText(fmt(v), chart.chartArea.right - 4, py + 18);
+        }
+      });
+
+      // Original budget 2027 label (hollow circle)
+      if (!isMobile && gfPreLayoff[10] !== null) {
+        const px = xScale.getPixelForValue(10);
+        const py = yScale.getPixelForValue(gfPreLayoff[10]);
+        ctx.font = '12px ' + C.sans;
+        ctx.fillStyle = C.red;
+        ctx.textAlign = 'right';
+        ctx.fillText('no cuts', px - 16, py + 4);
+      }
+
+      // Transfer annotation with elbow leader line (desktop only)
+      if (!isMobile) {
+        const dropMidX = (xScale.getPixelForValue(3) + xScale.getPixelForValue(4)) / 2;
+        const dropMidY = (yScale.getPixelForValue(gfBalance[3]) + yScale.getPixelForValue(gfBalance[4])) / 2;
+        const labelX = dropMidX + 28;
+        const labelY = dropMidY - 2;
+
+        ctx.fillStyle = C.text;
+        ctx.font = '600 12px ' + C.sans;
+        ctx.textAlign = 'left';
+        ctx.fillText('$5.6M transferred', labelX, labelY - 4);
+        ctx.fillText('to Building Fund', labelX, labelY + 10);
+
+        ctx.beginPath();
+        ctx.arc(dropMidX, dropMidY, 3, 0, Math.PI * 2);
+        ctx.fillStyle = C.muted;
+        ctx.fill();
+
+        ctx.strokeStyle = C.muted;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(dropMidX, dropMidY);
+        ctx.lineTo(labelX - 4, dropMidY);
+        ctx.stroke();
+      }
+
+      ctx.restore();
+    }
+  }],
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { top: 8 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.dataset.label + ': ' + fmt(ctx.parsed.y)
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0, max: 16e6,
+        ticks: { callback: v => { const m = v/1e6; return '$' + (m%1===0 ? m.toFixed(0) : m.toFixed(1)) + 'M'; }, font: { family: C.mono, size: 13 } },
+        grid: { color: C.grid }
+      },
+      x: {
+        grid: { display: false },
+        ticks: {
+          font: { family: C.mono, size: 13 },
+          callback: function(val, i) {
+            if (this.getLabelForValue(val) === '2027') return ['2027', 'proj.'];
+            return this.getLabelForValue(val);
+          }
+        }
+      }
+    }
+  }
+});
+
+// ─── EXHIBIT D: Where Each Revenue Dollar Goes ───
+// Building Fund expenditures from TRL budget documents (Budget in a Page, Building Fund sections)
+// 2017-2018: 2021 Final Budget. 2019-2020: 2023 Final Budget. 2021-2023: 2025 Final Budget.
+// 2024: 2026 Final Budget actual. 2025: 2026 YE est. 2026: budget.
+const dBuildingExp = [427988, 406790, 348464, 557251, 937315, 1113145, 1522314, 2955336, 1083500, 100000];
+// Benefits (employee medical, dental, retirement) from TRL budget documents.
+// Same sourcing pattern as salaries: actuals from most-recent final budget available.
+// 2017-2018: 2021 Final. 2019-2020: 2023 Final. 2021-2023: 2025 Final.
+// 2024 actual, 2025 YE est, 2026 budget: 2026 Final.
+const dBenefits = [4340854, 4340251, 4664347, 4680377, 4428600, 4388908, 4707942, 4890218, 5038810, 5109863];
+const dSalPct = SALARIES.map((s, i) => +(s / REVENUE[i] * 100).toFixed(1));
+const dBenPct = dBenefits.map((b, i) => +(b / REVENUE[i] * 100).toFixed(1));
+const dBldgPct = dBuildingExp.map((b, i) => +(b / REVENUE[i] * 100).toFixed(1));
+const dRestPct = dSalPct.map((s, i) => +(100 - s - dBenPct[i] - dBldgPct[i]).toFixed(1));
+const dNeutral = document.documentElement.dataset.theme === 'dark'
+  ? { fill: 'rgba(255,255,255,0.06)', stroke: 'rgba(255,255,255,0.2)' }
+  : { fill: 'rgba(0,0,0,0.05)', stroke: 'rgba(0,0,0,0.15)' };
+
+chartInstances.D = new Chart(document.getElementById('chartD').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: YEARS_10,
+    datasets: [
+      {
+        label: 'Salaries', data: dSalPct,
+        backgroundColor: C.redBg, borderColor: C.red,
+        borderWidth: 2, pointRadius: 0, fill: 'origin', tension: 0
+      },
+      {
+        label: 'Benefits', data: dBenPct,
+        backgroundColor: C.purpleBg, borderColor: C.purple,
+        borderWidth: 1.5, pointRadius: 0, fill: '-1', tension: 0
+      },
+      {
+        label: 'Building', data: dBldgPct,
+        backgroundColor: C.amberBg, borderColor: C.amber,
+        borderWidth: 1.5, pointRadius: 0, fill: '-1', tension: 0
+      },
+      {
+        label: 'Everything else', data: dRestPct,
+        backgroundColor: dNeutral.fill, borderColor: dNeutral.stroke,
+        borderWidth: 1, pointRadius: 0, fill: '-1', tension: 0
+      }
+    ]
+  },
+  plugins: [{
+    id: 'chartDAnnotations',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const yScale = chart.scales.y;
+      const C = tc();
+      ctx.save();
+
+      const meta0 = chart.getDatasetMeta(0); // Salaries
+      const meta1 = chart.getDatasetMeta(1); // Benefits
+      const meta2 = chart.getDatasetMeta(2); // Building
+      const meta3 = chart.getDatasetMeta(3); // Everything else
+      const bottom = yScale.getPixelForValue(0);
+
+      // Salary label at 2026 (index 9) — centered in bottom band
+      const si = 9;
+      const salMid = (meta0.data[si].y + bottom) / 2;
+      ctx.fillStyle = C.red;
+      ctx.font = '600 13px ' + C.mono;
+      ctx.textAlign = 'right';
+      ctx.fillText('Salaries', meta0.data[si].x - 8, salMid + 7);
+
+      // Benefits label at 2026 — centered in purple band
+      const benMid = (meta1.data[si].y + meta0.data[si].y) / 2;
+      ctx.fillStyle = C.purple;
+      ctx.font = '600 12px ' + C.mono;
+      ctx.textAlign = 'right';
+      ctx.fillText('Benefits', meta1.data[si].x - 8, benMid + 5);
+
+      // Building label at 2024 peak (index 7) — centered in amber band
+      const bi = 7;
+      const bldMid = (meta2.data[bi].y + meta1.data[bi].y) / 2;
+      ctx.fillStyle = C.amber;
+      ctx.font = '600 12px ' + C.mono;
+      ctx.textAlign = 'center';
+      ctx.fillText('Building', meta2.data[bi].x, bldMid + 5);
+
+      // "Everything else" label at 2024 — where squeeze is worst
+      const restMid = (meta3.data[bi].y + meta2.data[bi].y) / 2;
+      ctx.fillStyle = C.muted;
+      ctx.font = '600 12px ' + C.mono;
+      ctx.textAlign = 'center';
+      ctx.fillText('Everything else', meta3.data[bi].x, restMid + 5);
+
+      ctx.restore();
+    }
+  }],
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const i = ctx.dataIndex;
+            if (ctx.datasetIndex === 0) return 'Salaries: ' + dSalPct[i].toFixed(1) + '%';
+            if (ctx.datasetIndex === 1) return 'Benefits: ' + dBenPct[i].toFixed(1) + '%';
+            if (ctx.datasetIndex === 2) return 'Building: ' + dBldgPct[i].toFixed(1) + '%';
+            return 'Everything else: ' + dRestPct[i].toFixed(1) + '%';
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        stacked: true, min: 0, max: 100,
+        ticks: { callback: v => v + '%', font: { family: C.mono, size: 13 } },
+        grid: { color: C.grid }
+      },
+      x: {
+        stacked: true,
+        grid: { display: false },
+        ticks: {
+          font: { family: C.mono, size: 13 },
+          callback: function(val, i) {
+            const yr = this.getLabelForValue(val);
+            if (yr === '2025') return [yr, 'est.'];
+            if (yr === '2026') return [yr, 'proj.'];
+            return yr;
+          }
+        }
+      }
+    }
+  }
+});
+
+// ─── EXHIBIT E: Fewer People, More Money ───
+const eFte = [253.43, 251.98, 249.73, 249.50, 232.45, 227.73, 227.03, 228.43, 229.28, 230.38];
+const eSal = SALARIES.slice(0, 10);
+const eFteIdx = eFte.map(v => +(v / eFte[0] * 100).toFixed(1));
+const eSalIdx = eSal.map(v => +(v / eSal[0] * 100).toFixed(1));
+
+chartInstances.E = new Chart(document.getElementById('chartE').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: YEARS_10,
+    datasets: [
+      {
+        label: 'Budgeted Positions', data: eFteIdx,
+        borderColor: C.blue, borderWidth: 2.5, pointRadius: 4,
+        pointBackgroundColor: C.blue,
+        fill: false, tension: 0
+      },
+      {
+        label: 'Total Salary Spending', data: eSalIdx,
+        borderColor: C.red, borderWidth: 2.5, pointRadius: 4,
+        pointBackgroundColor: C.red,
+        fill: false, tension: 0
+      }
+    ]
+  },
+  plugins: [{
+    id: 'chartEAnnotations',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const C = tc();
+      const area = chart.chartArea;
+      ctx.save();
+
+      const meta0 = chart.getDatasetMeta(0); // positions
+      const meta1 = chart.getDatasetMeta(1); // salary
+      const last = eFteIdx.length - 1;
+
+      // Start labels at 2017 (both lines at 100, same y)
+      ctx.font = '500 11px ' + C.mono;
+      ctx.fillStyle = C.blue;
+      ctx.textAlign = 'left';
+      ctx.fillText('253 FTE', meta0.data[0].x + 8, meta0.data[0].y - 8);
+      ctx.fillStyle = C.red;
+      ctx.fillText('$11.7M', meta1.data[0].x + 8, meta1.data[0].y + 14);
+
+      // Endpoint labels at 2025
+      ctx.font = '600 13px ' + C.mono;
+
+      var pctFmt = function(v) { return (v > 0 ? '+' : v < 0 ? '\u2212' : '') + Math.abs(v) + '%'; };
+
+      ctx.fillStyle = C.blue;
+      ctx.textAlign = 'center';
+      ctx.fillText(pctFmt(Math.round(eFteIdx[last] - 100)), meta0.data[last].x, meta0.data[last].y - 12);
+
+      ctx.fillStyle = C.red;
+      ctx.textAlign = 'center';
+      ctx.fillText(pctFmt(Math.round(eSalIdx[last] - 100)), meta1.data[last].x, meta1.data[last].y - 12);
+
+      ctx.restore();
+    }
+  }],
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { top: 8 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            const i = ctx.dataIndex;
+            const chg = (v) => (v >= 100 ? '+' : '') + (v - 100).toFixed(1) + '%';
+            if (ctx.datasetIndex === 0) return 'Positions: ' + eFte[i].toFixed(1) + ' FTE (' + chg(eFteIdx[i]) + ')';
+            return 'Salaries: ' + fmt(eSal[i]) + ' (' + chg(eSalIdx[i]) + ')';
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 85, max: 155,
+        ticks: {
+          callback: v => {
+            if (v === 100) return '0%';
+            return (v > 100 ? '+' : '') + (v - 100) + '%';
+          },
+          font: { family: C.mono, size: 13 }
+        },
+        grid: {
+          color: ctx => ctx.tick.value === 100 ? C.muted : C.grid
+        }
+      },
+      x: {
+        grid: { display: false },
+        ticks: { font: { family: C.mono, size: 13 } }
+      }
+    }
+  }
+});
+
+// ─── EXHIBIT F: The Structural Mismatch ───
+// CPI-U Annual Averages, Seattle-Tacoma-Bellevue (BLS Series CUURS49DSA0)
+// Retrieved 2026-03-19 via BLS Public Data API v2
+const fCpi = [262.668, 271.089, 277.984, 282.693, 295.560, 322.167, 340.845, 353.488, 362.039];
+// Salary per FTE (General Fund salary actuals / budgeted FTE from Position Inventory)
+const fSalPerFte = [46135, 46364, 46751, 49423, 50842, 53544, 59667, 62561, 68166];
+const fRev = REVENUE.slice(0, 9);
+
+const fCpiIdx = fCpi.map(v => +(v / fCpi[0] * 100).toFixed(1));
+const fSalIdx = fSalPerFte.map(v => +(v / fSalPerFte[0] * 100).toFixed(1));
+const fRevIdx = fRev.map(v => +(v / fRev[0] * 100).toFixed(1));
+
+chartInstances.F = new Chart(document.getElementById('chartF').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: YEARS_9,
+    datasets: [
+      {
+        label: 'Salary per FTE', data: fSalIdx,
+        borderColor: C.red, borderWidth: 3, pointRadius: 4,
+        pointBackgroundColor: C.red,
+        fill: false, tension: 0
+      },
+      {
+        label: 'Seattle CPI', data: fCpiIdx,
+        borderColor: C.muted, borderWidth: 2, borderDash: [6, 4],
+        pointRadius: 0, fill: false, tension: 0
+      },
+      {
+        label: 'Revenue', data: fRevIdx,
+        borderColor: C.green, borderWidth: 2.5, pointRadius: 0,
+        fill: false, tension: 0
+      },
+    ]
+  },
+  plugins: [{
+    id: 'chartFAnnotations',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      const C = tc();
+      ctx.save();
+
+      const last = YEARS_9.length - 1;
+      const meta0 = chart.getDatasetMeta(0); // Salary per FTE
+      const meta1 = chart.getDatasetMeta(1); // CPI
+      const meta2 = chart.getDatasetMeta(2); // Revenue
+
+      ctx.textAlign = 'center';
+      ctx.fillStyle = C.red; ctx.font = '600 13px ' + C.mono;
+      ctx.fillText('+' + (fSalIdx[last] - 100).toFixed(0) + '%', meta0.data[last].x, meta0.data[last].y - 12);
+
+      ctx.fillStyle = C.muted; ctx.font = '600 13px ' + C.mono;
+      ctx.fillText('+' + (fCpiIdx[last] - 100).toFixed(0) + '%', meta1.data[last].x, meta1.data[last].y - 12);
+
+      ctx.fillStyle = C.green; ctx.font = '600 13px ' + C.mono;
+      ctx.fillText('+' + (fRevIdx[last] - 100).toFixed(0) + '%', meta2.data[last].x, meta2.data[last].y - 12);
+
+      ctx.restore();
+    }
+  }],
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { top: 8 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => {
+            if (ctx.dataset.label.startsWith('_')) return null;
+            return ctx.dataset.label + ': ' + ctx.parsed.y.toFixed(1);
+          }
+        },
+        filter: i => !i.dataset.label.startsWith('_')
+      }
+    },
+    scales: {
+      y: {
+        min: 95, max: 155,
+        ticks: {
+          callback: v => {
+            if (v === 100) return '0%';
+            return (v > 100 ? '+' : '') + (v - 100) + '%';
+          },
+          font: { family: C.mono, size: 13 }
+        },
+        grid: { color: ctx => ctx.tick.value === 100 ? C.muted : C.grid }
+      },
+      x: {
+        grid: { display: false },
+        ticks: { font: { family: C.mono, size: 13 } }
+      }
+    }
+  }
+});
+
+// ─── EXHIBIT G: Levy Rate ───
+const gYears = ['2012','2013','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'];
+// 2012-2015: from historical levy rate chart in 2022 Final Budget (p.12).
+// 2016-2024: from TRL Final Budget documents (levy rate for that collection year).
+// 2025: $0.228924 from Res 24-004 (2024 levy for 2025 collection), adopted Dec 18, 2024.
+// 2026: $0.224404 from Res 25-004 (2025 levy for 2026 collection), adopted Dec 30, 2025.
+const gRates = [0.383, 0.415, 0.416, 0.41071, 0.40947, 0.39926, 0.382151, 0.362124, 0.340468, 0.323658, 0.287998, 0.236007, 0.234024, 0.228924, 0.224404];
+const gMaxRate = 0.50;
+const gMaxLine = gRates.map(() => gMaxRate);
+
+chartInstances.G = new Chart(document.getElementById('chartG').getContext('2d'), {
+  type: 'line',
+  data: {
+    labels: gYears,
+    datasets: [
+      {
+        label: 'TRL Levy Rate', data: gRates,
+        borderColor: C.blue, borderWidth: 2.5, pointRadius: 3.5,
+        pointBackgroundColor: C.blue,
+        fill: false, tension: 0
+      },
+      {
+        label: 'Statutory Maximum ($0.50)', data: gMaxLine,
+        borderColor: C.red, borderWidth: 1, borderDash: [6, 4],
+        pointRadius: 0, fill: false, tension: 0
+      },
+    ]
+  },
+  plugins: [{
+    id: 'chartGAnnotations',
+    afterDraw(chart) {
+      const ctx = chart.ctx;
+      const xScale = chart.scales.x;
+      const yScale = chart.scales.y;
+      const C = tc();
+      const area = chart.chartArea;
+      ctx.save();
+
+      // Endpoint labels
+      const last = gRates.length - 1;
+      ctx.font = '600 13px ' + C.mono;
+      ctx.fillStyle = C.blue;
+      ctx.textAlign = 'left';
+      ctx.fillText('$' + gRates[0].toFixed(3), area.left + 4, yScale.getPixelForValue(gRates[0]) + 18);
+      ctx.fillStyle = C.blue;
+      ctx.textAlign = 'right';
+      const lastY = yScale.getPixelForValue(gRates[last]);
+      ctx.fillText('$' + gRates[last].toFixed(3), area.right - 4, lastY + 18);
+
+
+      ctx.restore();
+    }
+  }],
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    layout: { padding: { right: 20 } },
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ctx.dataset.label + ': $' + ctx.parsed.y.toFixed(3)
+        }
+      }
+    },
+    scales: {
+      y: {
+        min: 0.18, max: 0.55,
+        ticks: { callback: v => '$' + v.toFixed(2), stepSize: 0.05, font: { family: C.mono, size: 13 } },
+        grid: { color: C.grid }
+      },
+      x: {
+        grid: { display: false },
+        ticks: { font: { family: C.mono, size: 13 }, maxRotation: 0 }
+      }
+    }
+  }
+});
+
+} // end buildAllCharts
+
+setupChartInfra(buildAllCharts);
+</script>
+
+</body>
+</html>

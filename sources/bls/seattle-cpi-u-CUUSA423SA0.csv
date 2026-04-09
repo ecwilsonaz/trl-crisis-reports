@@ -1,0 +1,33 @@
+# Seattle-Tacoma-Bellevue CPI-U (All Items)
+# BLS Series: CUUSA423SA0 (semiannual averages, 2021-2026)
+# BLS Series: CUURS49DSA0 (semiannual averages, 2017-2020; produces identical 2021 values)
+# Source: https://data.bls.gov/timeseries/CUUSA423SA0
+# Downloaded: March 2026
+# Used in: Exhibit I CPI-adjusted baseline calculations
+# Note: 2026 CPI estimated at 3.5% YoY (not yet published by BLS)
+#
+# The CPI-adjusted baseline in Exhibit I takes 2017 Service Center salary spending ($2,170,828)
+# and grows it at the annual CPI rate for each subsequent year. This shows what spending would
+# have been if it simply kept pace with inflation, holding staffing constant.
+#
+Year,Half,CPI_Value,Annual_Pct_Change,Cumulative_Since_2017
+2017,H1,258.474,,0.0%
+2017,H2,262.044,,0.0%
+2018,H1,267.018,3.3%,3.2%
+2018,H2,270.139,,
+2019,H1,274.030,2.6%,5.8%
+2019,H2,276.574,,
+2020,H1,275.718,0.6%,6.4% (note: COVID-affected)
+2020,H2,280.576,,
+2021,H1,285.987,3.7%,10.6% (note: post-COVID rebound)
+2021,H2,296.245,,
+2022,H1,312.792,9.0%,20.5% (note: inflation spike)
+2022,H2,316.614,,
+2023,H1,322.270,3.0%,24.1%
+2023,H2,326.020,,
+2024,H1,330.832,2.7%,27.5%
+2024,H2,333.510,,
+2025,H1,339.0,2.5% (est),30.4% (est)
+2025,H2,342.0,,
+2026,H1,350.9,3.5% (est),34.8% (est)
+2026,H2,354.1,,
