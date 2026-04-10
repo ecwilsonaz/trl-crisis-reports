@@ -1,0 +1,34 @@
+library_system,year,result,yes_pct,election_date,election_type,counties,turnout_pct,confirmed_date,confirmed_pct,confirmed_turnout,notes
+King County Library System,2002,PASSED,,2002-02-05,special,1,,,,,From KCLS FAQ; predates 2005 scope but included for completeness
+Lopez Island Library District,2006,PASSED,,2006-11-07,general,1,,true,false,false,San Juan County Council doc confirms Nov 2006; yes% and turnout unknown — need PRR to San Juan County Auditor
+Pierce County Library System,2006,PASSED,55.0,2006-11-07,general,1,,true,false,false,PCLS website confirms Nov 2006; Library Journal 2007 reports 55% yes (PCLS says 56%); turnout unknown — need PRR to Pierce County Auditor
+Spokane County Library District,2006,PASSED,55.0,2006-09-19,special,1,44.79,true,false,true,Spokesman-Review confirms Sep 19 2006 special; WA SOS blog ~55% yes; turnout 44.79% from Spokane County Election Statistics PDF (130688 reg / 58530 returned)
+Whitman County Rural Library District,2006,PASSED,,2006-11-07,general,1,,false,false,false,Month unconfirmed; Nov general most likely; yes% and turnout unknown — need PRR to Whitman County Auditor
+Jefferson County Rural Library District,2007,PASSED,60.0,2007-11-06,general,1,62.18,true,false,true,WA SOS clipping confirms 2007; turnout from SOS page
+Kitsap Regional Library,2007,FAILED,45.0,2007-11-06,general,1,53.9,true,false,true,Kitsap Daily News confirms Nov 2007; proposed 78% increase
+Whatcom County Library System,2009,PASSED,55.0,2009-11-03,general,1,53.62,true,false,true,Ballotpedia confirms Nov 2009; rate $0.44/$1000
+Whitman County Rural Library District,2009,PASSED,65.90,2009-11-03,general,1,55.34,true,true,true,SOS CSV confirmed
+Timberland Regional Library,2009,FAILED,45.10,2009-02-03,special,5,34.07,true,true,true,SOS confirmed; only item on ballot; cost $350-400K
+Asotin County Library District,2010,PASSED,62.95,2010-02-09,special,1,51.26,true,true,true,SOS CSV confirmed
+King County Library System,2010,PASSED,52.09,2010-02-09,special,1,40.01,true,true,true,KCLS FAQ confirms Feb 9 2010; rate restored to $0.50/$1000
+Kitsap Regional Library,2010,FAILED,41.0,2010-11-02,general,1,73.54,true,false,true,Kitsap Daily News Nov 3 2010 reports results; Ballotpedia confirms
+North Olympic Library System,2010,PASSED,59.10,2010-08-17,primary,1,54.2,true,true,true,SOS CSV confirmed
+Spokane County Library District,2010,PASSED,54.86,2010-08-17,primary,1,42.96,true,true,true,SOS CSV confirmed
+San Juan Island Library District,2011,PASSED,55.26,2011-08-16,primary,1,52.22,true,true,true,SOS CSV confirmed
+Stevens County Rural Library District,2014,FAILED,47.73,2014-11-04,general,1,62.3,true,true,true,SOS shows 47.73% — listed as PASSED in some compilations but SOS data says FAILED
+Orcas Island Library District,2016,PASSED,64.49,2016-11-08,general,1,88.25,true,true,true,SOS CSV confirmed
+Kitsap Regional Library,2017,PASSED,65.15,2017-11-07,general,1,38.48,true,true,true,SOS CSV confirmed; rate $0.43/$1000 (down from $0.48 in 2007/2010)
+Pierce County Library System,2018,PASSED,50.20,2018-11-06,general,1,66.38,true,true,true,SOS CSV confirmed
+Sno-Isle Libraries,2018,PASSED,50.46,2018-04-24,special,2,27.0,true,true,true,SOS CSV confirmed (Snohomish + Island); barely passed; turnout ~avg of 25.64% Sno + 39.88% Isl
+North Olympic Library System Sequim Prop 2,2018,FAILED,58.68,2018-11-06,general,1,76.15,true,true,true,SOS CSV; needed 60% supermajority — would have passed as regular levy
+Whitman County Rural Library District,2018,PASSED,74.38,2018-02-13,special,1,36.33,true,true,true,SOS CSV confirmed
+Lopez Island Library District,2019,PASSED,68.60,2019-11-05,general,1,58.33,true,true,true,SOS CSV confirmed
+Pend Oreille County Library District,2019,PASSED,64.06,2019-08-06,primary,1,38.34,true,true,true,SOS CSV confirmed
+Spokane County Library District,2019,PASSED,55.00,2019-08-06,primary,1,34.36,true,true,true,SOS CSV confirmed
+Fort Vancouver Regional Library,2025,PASSED,54.33,2025-08-05,primary,4,27.36,true,true,true,SOS CSV confirmed; passed despite failing in Cowlitz Co (40.76%)
+Kitsap Regional Library,2025,PASSED,61.93,2025-08-05,primary,1,35.74,true,true,true,SOS CSV confirmed; rate $0.39/$1000 (down from $0.43 in 2017)
+Whatcom County Library System,2025,PASSED,56.72,2025-08-05,primary,1,31.48,true,true,true,SOS CSV confirmed
+Lopez Island Library District,2025,PASSED,77.64,2025-08-05,primary,1,47.2,true,true,true,SOS CSV confirmed
+Orcas Island Library District,2025,PASSED,64.04,2025-11-04,general,1,56.41,true,true,true,SOS CSV confirmed
+Upper Skagit Rural Library District,2025,PASSED,56.34,2025-11-04,general,1,39.92,true,true,true,SOS CSV confirmed
+Asotin County Library District,2025,FAILED,44.71,2025-11-04,general,1,41.08,true,true,true,SOS CSV confirmed
