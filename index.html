@@ -191,7 +191,7 @@
     </div>
     <div class="chart-wrap"><canvas id="chartA" role="img" aria-label="Exhibit A: Line chart showing TRL revenue vs expenditures from 2017 to 2026" aria-describedby="table-a"></canvas></div>
   </div>
-  <p class="chart-note">Y-axis begins at $20M to show meaningful variation in the $22M&ndash;$33M range. Shaded area = deficit (expenditures exceeding revenue). 2020 expenditures exclude a $5.6M one-time transfer to the Building Fund for the Mountain View library build (shown separately in <a href="#exhibit-d">Exhibit D</a>).</p>
+  <p class="chart-note">Y-axis begins at $20M to show meaningful variation in the $22M&ndash;$33M range. Shaded area = deficit (expenditures exceeding revenue). 2020 expenditures exclude a $5.6M one-time transfer to the Building Fund for future capital projects (shown separately in <a href="#exhibit-d">Exhibit D</a>).</p>
   <details class="sr-table" id="table-a">
     <summary>View data table</summary>
     <table>
@@ -497,7 +497,7 @@ const REVENUE  = [22986972, 23711616, 24448997, 24669027, 25536273, 25931476, 26
 const SALARIES = [11681970, 11682925, 11674836, 12330800, 11818000, 12193513, 13545748, 14290186, 15628985, 17102264];
 
 // ─── EXHIBIT A: Revenue vs Expenditures ───
-// 2020 excludes $5.6M one-time transfer to Building Fund for Mountain View library build (see Exhibit D).
+// 2020 excludes $5.6M one-time transfer to Building Fund for future capital projects (see Exhibit D).
 const aExpend = [22049853, 21911028, 22979157, 23102946, 24687671, 24608630, 27057712, 28452840, 30432723, 32811283];
 
 chartInstances.A = new Chart(document.getElementById('chartA').getContext('2d'), {
