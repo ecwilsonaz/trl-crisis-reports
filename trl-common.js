@@ -368,7 +368,6 @@ function initMobileToc() {
   // 1. Build section map from DOM
   var sections = [];
   var exhibits = document.querySelectorAll('section.exhibit[id]');
-  if (!exhibits.length) return;
 
   // Build a map of desktop sidebar TOC subsection targets → display text.
   // This gives us clean labels for items like callout divs where textContent is verbose.
@@ -402,10 +401,20 @@ function initMobileToc() {
     });
   });
 
+  // Prose-page fallback (no exhibits): build the section map from the sidebar TOC links.
+  if (!sections.length) {
+    document.querySelectorAll('.toc-link[data-target]').forEach(function(a) {
+      var id = a.getAttribute('data-target');
+      if (document.getElementById(id)) {
+        sections.push({ id: id, letter: '', title: a.textContent.trim(), depth: 0 });
+      }
+    });
+  }
   if (!sections.length) return;
 
   // Determine current page part
-  var pagePart = window.location.pathname.indexOf('part2') !== -1 ? 'Part 2' : 'Part 1';
+  var pagePart = window.location.pathname.indexOf('part2') !== -1 ? 'Part 2'
+    : window.location.pathname.indexOf('part3') !== -1 ? 'Part 3' : 'Part 1';
 
   // HTML escape for defense-in-depth (content is author-controlled but good hygiene)
   function esc(s) { return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }

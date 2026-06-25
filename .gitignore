@@ -14,3 +14,6 @@ leader-line.min.js
 .claude/
 docs/plans/
 systems.html
+
+# Private editorial process/strategy + deferred (unpublished, sensitive) research — never publish
+.research-private/
