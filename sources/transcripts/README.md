@@ -1,9 +1,9 @@
 # Meeting Transcripts
 
-Automated transcriptions of Timberland Regional Library Board of Trustees and committee meetings, covering 2012 through March 2026.
+Automated transcriptions of Timberland Regional Library Board of Trustees and committee meetings, covering 2012 through June 2026.
 
-- **Board meetings:** 203 transcripts (`board-meetings/`)
-- **Committee meetings:** 77 transcripts (`committee-meetings/`)
+- **Board meetings:** 216 transcripts (`board-meetings/`)
+- **Committee meetings:** 80 transcripts (`committee-meetings/`)
 
 ## How these were produced
 
